@@ -176,7 +176,7 @@ class DigitalKeyboard {
     const keyboardBox = document.createElement('div');
     keyboardBox.className = `${s.keyboard} ${this.options.className}`;
     keyboardBox.innerHTML = keyboards.join('');
-    keyboardBox.addEventListener('touchend', (e) => {
+    keyboardBox.addEventListener('mouseup', (e) => {
       let {action, content} = e.target.dataset;
       this.handleClick(action, content);
     });
